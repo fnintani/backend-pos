@@ -72,7 +72,7 @@ const logout = async (req, res, next) => {
     }
 
     return res.json({
-        error: 1,
+        error: 0,
         message: 'Logout berhasil'
     });
 }
