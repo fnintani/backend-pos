@@ -11,6 +11,7 @@ const tagRoute = require('./app/tag/router');
 const authRoute = require('./app/auth/router');
 const deliveryAddressRoute = require('./app/deliveryAddress/router');
 const cartRoute = require('./app/cart/router');
+const orderRoute = require('./app/order/router')
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use('/api', productRoute);
 app.use('/api', categoryRoute);
 app.use('/api', tagRoute);
 app.use('/api', cartRoute);
+app.use('/api', orderRoute);
 
 //home
 app.use('/', function(req,res) {
