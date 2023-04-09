@@ -12,7 +12,8 @@ router.post('/delivery-addresses',
 router.put('/delivery-addresses/:id', 
     police_check('update', 'DeliveryAddress'),
     deliveryAddressController.updateData);
-router.delete('/delivery-addresses/:id',
+router.delete('/delivery-addresses/:id', 
+    police_check('delete', 'DeliveryAddress'),
     deliveryAddressController.deleteData
 );
 
