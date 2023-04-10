@@ -37,11 +37,11 @@ const create = async(req, res, next) => {
                 qty: parseInt(item.qty),
                 price: parseInt(item.product.price),
                 order: order._id,
-
+                product: item.product._id
              })));
         orderItems.forEach(item => order.order_items.push(item));
         order.save();
-        await CartItem.deleteMany({ user: req.user._id});
+        await CartItem.deleteMany({user: req.user._id});
         return res.json(order);
     } catch (err) {
 
